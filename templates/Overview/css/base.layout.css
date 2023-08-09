@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/**
+ * JYAML - Template Framework includes YAML for Joomla!
+ *
+ * All rights reserved. The JYAML project is a template to manage and
+ * configure Joomla!-Templates with the YAML XHTML/CSS Framework
+ * - http://www.yaml.de
+ *
+ * -----------------------------------------------------------------------------
+ *
+ * @version     Id: $Id$
+ *
+ * @package     JYAML
+ * @subpackage  Stylesheet
+ *
+ * @author      Reinhard Hiebl <reinhard@hieblmedia.com>
+ * @copyright   Copyright (C) 2006 - 2016, HieblMedia (Reinhard Hiebl)
+ * @license     http://www.jyaml.de/en/license Creative Commons Attribution 3.0
+ * @link        http://www.jyaml.de
+ */
+
+/* Import YAML base stylesheet */
+
+@import url(../../../libraries/jyaml/yaml/core/base.min.css);
+/* Import layout stylesheet */
+
+@import url(screen.basemod.css);
+/* Import content stylesheet */
+
+@import url(screen.content.css);
+/* Import MCH Tag Dictionary Styling */
+
+@import url(mch.tag-dictionary.css);

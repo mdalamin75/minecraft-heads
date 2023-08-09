@@ -1,0 +1,867 @@
+@charset "UTF-8";
+/**
+ * JYAML - Template Framework includes YAML for Joomla!
+ *
+ * All rights reserved. The JYAML project is a template to manage and
+ * configure Joomla!-Templates with the YAML XHTML/CSS Framework
+ * - http://www.yaml.de
+ *
+ * -----------------------------------------------------------------------------
+ *
+ * @version     Id: $Id$
+ *
+ * @package     JYAML
+ * @subpackage  Stylesheet
+ *
+ * @author      Reinhard Hiebl <reinhard@hieblmedia.com>
+ * @copyright   Copyright (C) 2006 - 2016, HieblMedia (Reinhard Hiebl)
+ * @license     http://www.jyaml.de/en/license Creative Commons Attribution 3.0
+ * @link        http://www.jyaml.de
+ */
+
+/**
+ * Webfont import Example (font-family: "SansationRegular")
+ * @section webfont
+ */
+
+/*
+ * Custom build (//www.fontsquirrel.com/fontface/generator)
+ * Example Font: font-family: "SansationRegular"
+*/
+
+/*
+@import url(../fonts/sansation/sansation.css);
+*/
+
+/* Google Font API */
+
+@import url(//fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700|Open+Sans:400,700);
+/* Import form styling */
+
+@import url(screen.forms.css);
+@media all {
+    /**
+	 * @section global typography settings
+	 *
+	 * vertical rhythm settings (based on em-unit)
+	 * -------------------------------------------
+	 * basefont-size: 14px (87.5%)
+	 * line-height  : 21px (factor: 1.5)
+	 */
+    /* reset font size for all elements to standard (16 Pixel) */
+    html * {
+        font-size: 100.01%;
+    }
+    /**
+	 * reset monospaced elements to font size 16px in all browsers
+	 * @see: http://webkit.org/blog/67/strange-medium/
+	 */
+    textarea,
+    pre,
+    code,
+    kbd,
+    samp,
+    var,
+    tt {
+        font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+    }
+    /**
+	 * Base layout gets standard font size
+	 */
+    body {
+        font-family: "Open Sans", Arial, Helvetica, sans-serif;
+        font-size: 87.5%;
+        /* base: 14px */
+        color: #444;
+        /* Prevent auto-scaling of text in mobile webkit browsers */
+        -webkit-text-size-adjust: 100%;
+        /*Razen: Social Menu */
+    }
+    #social {
+        margin: 0px !important;
+    }
+    #social li {
+        margin: 0px !important;
+        list-style: none;
+        float: left;
+    }
+    #social img {
+        margin: 2px;
+    }
+    /* Temporary Buttons for Forms like Login or Raffle */
+    .page-sfx-allow-system-messages .alert {
+        display: block !important;
+    }
+    .form_legacy input {
+        width: 300px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 14px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .spamcheck_loginform input {
+        width: 80%;
+        margin: 3px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 14px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .inputfield_legacy {
+        width: 75%;
+        margin: 12px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 14px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .form_legacy button,
+    .button_legacy {
+        width: 20%;
+        margin: 12px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 14px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    span.patreon a {
+        display: inline-block;
+        line-height: 32px;
+        background: url("https://minecraft-heads.com/images/icons/patreon%2032.png") no-repeat;
+        padding-left: 40px;
+        font-weight: bold;
+        color: #F96854;
+    }
+    span.datapack-dl a {
+        display: inline-block;
+        line-height: 32px;
+        background: url("https://minecraft-heads.com/images/icons/zip_32.png") no-repeat;
+        padding-left: 36px;
+        font-weight: bold;
+    }
+    /* RAZEN: TABELLE DER STARTSEITE */
+    table.start {
+        width: 83%;
+        background: #EEEEEE;
+        border-collapse: collapse;
+        border-top: 0px #ccc solid;
+        margin: 0;
+    }
+    table.start tr:first-child td {
+        background: #B8CCE4;
+        font-weight: bold;
+        padding: 7px 0 7px 10px;
+        padding-left: 30px;
+    }
+    table.start tr td {
+        padding-left: 30px;
+        padding-right: 10px;
+        vertical-align: top;
+    }
+    table.start tr:first-child td a {
+        color: #16273D;
+        vertical-align: middle;
+    }
+    /* RAZEN: NEWS */
+    div.newsflash {
+        margin: 5px;
+    }
+    /* RAZEN: TABELLE AUF ACCOUNT-ITEM_PAGE */
+    table.acc,
+    table.acc tr,
+    table.acc td {
+        border: 0px;
+        padding: 0px;
+    }
+    /* RAZEN: Ausrichtung von Text und Rating auf Item-Seite */
+    span.itemseite {
+        display: inline-block;
+        width: 100px;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    /* RAZEN NEU: INPUT-FELDER & COPY-BUTTONS */
+    div.codefield {
+        /* Border nur für Testzwecke */
+        /* border-style: solid;
+		border-width: 1px;
+		border-color: #F00; */
+        margin: 0 3px 3px 0;
+        display: flex;
+        height: 23px;
+    }
+    div.codefield2 {
+        /* Border nur für Testzwecke */
+        /* border-style: solid;
+		border-width: 1px;
+		border-color: #F00; */
+        margin: 0 3px 3px 0;
+        display: flex;
+        height: 91px;
+        /* 58 = 3 rows, 91 = 5 rows */
+    }
+    textarea.codes {
+        font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+        padding: 2px;
+        flex: 1;
+        margin: 0px;
+        box-sizing: border-box;
+        resize: none;
+        overflow: auto;
+    }
+    input.codes {
+        font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+        padding: 2px;
+        flex: 1;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    button.copy {
+        font-size: 87.5%;
+        /* base: 14px */
+        box-sizing: border-box;
+        float: right;
+        padding: 0 5px 0 5px;
+        margin: 0px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #7A7A7A;
+        border-left: 0px;
+    }
+    /**
+	 * Webfont Example
+	 * @require '@import url(../fonts/sansation/sansation.css);' - see at top in this file
+	 * @section webfont
+	 */
+    /* body { font-family: "SansationRegular"; } */
+    /* --- Headings ------------------------------------------------------------- */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Droid Sans", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: #161e21;
+        margin: 0;
+    }
+    /* RAZEN: CSS FÜRS BOX ZUM ÜBERSCHRIFT BEIM EINZELITEM **/
+    h1 {
+        /* font-size: 48px; */
+        font-size: 342.85714%;
+        line-height: 0.875;
+        border-bottom: 1px solid #DDD;
+        border-left: 1px solid #CCC;
+        border-right: 1px solid #CCC;
+        border-top: 1px solid #CCC;
+        background: #fafafa none repeat scroll 0 0;
+        line-height: normal;
+        margin: 0 0 15px 0;
+        padding: 8px 8px 8px 15px;
+    }
+    /* RAZEN: CSS FÜRS BOX ZUM ÜBERSCHRIFT BEIM EINZELITEM **/
+    h2 {
+        /* font-size: 32px; */
+        font-size: 228.57143%;
+        line-height: 1.3125;
+        margin: 0 0 0 0;
+        background: #fafafa none repeat scroll 0 0;
+        border: 1px solid #ddd;
+        line-height: normal;
+        margin: 0px;
+        padding: 8px;
+    }
+    h3 {
+        /* font-size: 24px; */
+        font-size: 171.42857%;
+        line-height: 0.875;
+        margin: 10px 0 10px 0;
+    }
+    h4 {
+        /* font-size: 21px; */
+        font-size: 150%;
+        line-height: 1;
+        margin: 0 0 1em 0;
+    }
+    h5 {
+        /* font-size: 18px; */
+        font-size: 128.57143%;
+        line-height: 1.16667;
+        margin: 0 0 1.16667em 0;
+    }
+    h6 {
+        /* font-size: 14px; */
+        font-size: 100%;
+        font-weight: bold;
+        line-height: 1.5;
+        margin: 0 0 1.5em 0;
+    }
+    /* --- Lists ---------------------------------------------------------------- */
+    ul,
+    ol,
+    dl {
+        font-size: 100%;
+        line-height: 1.5;
+        margin: 0 0 1.5em 1.5em;
+    }
+    ul {
+        list-style-type: disc;
+    }
+    ol {
+        list-style-type: decimal;
+    }
+    ul ul {
+        list-style-type: circle;
+        margin-top: 0;
+    }
+    ol ol {
+        list-style-type: lower-latin;
+        margin-top: 0;
+    }
+    ol ul {
+        list-style-type: circle;
+        margin-top: 0;
+    }
+    li {
+        font-size: 100%;
+        line-height: 1.5;
+        margin-left: 0;
+    }
+    dt {
+        font-weight: bold;
+    }
+    dd {
+        margin: 0 0 1.5em 0.8em;
+    }
+    /* --- General text formatting ---------------------------------------------- */
+    p {
+        font-size: 100%;
+        line-height: 1.5;
+        margin: 0 0 1.5em 0;
+    }
+    blockquote,
+    cite,
+    q {
+        font-family: "Droid Serif", Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+    }
+    blockquote {
+        background: transparent;
+        color: #666;
+        margin: 1.5em 0 0 1.5em;
+    }
+    strong,
+    b {
+        font-weight: bold;
+    }
+    em,
+    i {
+        font-style: italic;
+    }
+    big {
+        /* font-size: 16px; */
+        font-size: 114.28571%;
+        line-height: 1.3125;
+    }
+    small {
+        /* font-size: 12px; */
+        font-size: 85.71429%;
+        line-height: 1.75;
+    }
+    pre,
+    code,
+    kbd,
+    tt,
+    samp,
+    var {
+        font-size: 100%;
+    }
+    pre {
+        font-size: 100%;
+        line-height: 1.5;
+        margin: 0 0 1.5em 0;
+        white-space: pre;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    pre,
+    code {
+        color: #800;
+    }
+    kbd,
+    samp,
+    var,
+    tt {
+        color: #666;
+        font-weight: bold;
+    }
+    var,
+    dfn {
+        font-style: italic;
+    }
+    acronym,
+    abbr {
+        border-bottom: 1px #aaa dotted;
+        font-variant: small-caps;
+        letter-spacing: .07em;
+        cursor: help;
+    }
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+    sup {
+        top: -0.5em;
+    }
+    sub {
+        bottom: -0.25em;
+    }
+    mark {
+        background: yellow;
+        color: black;
+    }
+    hr {
+        color: #fff;
+        background: transparent;
+        margin: 0 0 0.75em 0;
+        padding: 0 0 0.67857em 0;
+        border: 0;
+        border-bottom: 1px #CACACA solid;
+    }
+    /* --- Links ---------------------------------------------------------------- */
+    a {
+        color: #4d87c7;
+        background: transparent;
+        text-decoration: none;
+    }
+    a:active {
+        outline: none;
+    }
+    /* maximum constrast for tab focus - change with great care */
+    a:hover,
+    a:focus {
+        text-decoration: none;
+    }
+    /* --- Images/Videos -------------------------------------------------------- */
+    img,
+    figure {
+        margin: 0;
+    }
+    /* fluid images/videos (e.g. img, object, embed, video) */
+    .flexible {
+        margin-bottom: 1.5em;
+        max-width: 100%;
+        height: auto;
+    }
+    * html .flexible {
+        /* IE6 support */
+        width: 98%;
+        /* 2% space for borders */
+    }
+    .bordered {
+        margin-bottom: 1.5em;
+        border: 2px #eee solid;
+        border: 2px rgba(255, 255, 255, 1) solid;
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+        box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Generic Content Classes
+	 * standard classes for positioning and highlighting
+	 *
+	 * @section content-generic-classes
+	 */
+    .highlight {
+        color: #c30;
+    }
+    .dimmed {
+        color: #888;
+    }
+    .box-info,
+    .box-success,
+    .box-warning,
+    .box-error {
+        display: block;
+        width: auto;
+        border-radius: 0.3em;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #888;
+        border-color: rgba(0, 0, 0, .3);
+        -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) inset;
+        -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) inset;
+        color: #444;
+        color: rgba(0, 0, 0, .8);
+        padding: 1.4286em;
+        margin: 1.5em 0 0 0;
+    }
+    .box-info>*:first-child,
+    .box-success>*:first-child,
+    .box-warning>*:first-child,
+    .box-error>*:first-child {
+        margin-top: 0;
+    }
+    .box-success {
+        background: #8c8;
+    }
+    .box-warning {
+        background: #cc8;
+    }
+    .box-error {
+        background: #c88;
+    }
+    .float-left,
+    .float_left,
+    .image-left,
+    .pull-left {
+        float: left;
+        display: inline;
+        margin: 10px 0 10px 0;
+    }
+    .float-right,
+    .float_right,
+    .image-right,
+    .pull-right {
+        float: right;
+        display: inline;
+        margin: 10px 0 10px 0;
+    }
+    .center,
+    .image-center {
+        text-align: center;
+        margin: 0 auto 1.5em auto;
+    }
+    img.center,
+    img.image-center {
+        display: block;
+    }
+    .align-right {
+        text-align: right;
+    }
+    .align-left {
+        text-align: left;
+    }
+    .align-center {
+        text-align: center;
+    }
+    .text-rtl {
+        direction: rtl;
+        text-align: right;
+    }
+    p.readmore a,
+    a.readmore {}
+    p.readmore a:before,
+    a.readmore:before {
+        content: "» ";
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Tables
+	 * Generic classes for table-width and design definition
+	 *
+	 * @section content-tables
+	 */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        color: #444;
+        /* RAZEN: HIER WIRD DER OBERE TABELLENRAND FORMATIERT! */
+        border-top: 1px #ccc solid;
+        border-bottom: 1px #ccc solid;
+        margin: 0 0 1.35714em 0;
+    }
+    table.narrow {
+        margin: 0 0 1.42857em 0;
+    }
+    table.narrow th,
+    table.narrow td {
+        padding: 0 0.5em;
+        line-height: 1.42857;
+    }
+    table.fixed {
+        table-layout: fixed;
+    }
+    table.bordertable {
+        border: 1px #ccc solid;
+    }
+    table.bordertable thead th {
+        background: #e0e0e0;
+        border-right: 1px #ccc solid;
+        border-bottom: 1px #ccc solid;
+    }
+    table.bordertable tbody th[scope="row"] {
+        background: #f0f0f0;
+    }
+    table.bordertable tbody th {
+        border-right: 1px solid #ccc;
+    }
+    table.bordertable tbody td {
+        border-right: 1px solid #ccc;
+    }
+    caption {
+        font-variant: small-caps;
+    }
+    th,
+    td {
+        /* line-height: 1.5em; */
+        vertical-align: middle;
+        padding-top: 7px;
+        padding-bottom: 2px;
+    }
+    th *:first-child,
+    td *:first-child {
+        margin-top: 0;
+    }
+    th.nowrap,
+    td.nowrap {
+        white-space: nowrap;
+    }
+    thead th {
+        text-align: left;
+        color: #000;
+        border-bottom: 2px #000 solid;
+    }
+    tbody {
+        /* highlight row on mouse over */
+    }
+    tbody th {
+        text-align: left;
+    }
+    tbody td {
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    }
+    tbody tr:hover th,
+    tbody tr:hover td {
+        /* RAZEN: HOVER-EFFEKT DER TABELLEN RAUS! */
+        /* background: #f8f8f8; */
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Joomla Specific
+	 *
+	 * @section joomla-core
+	 */
+    /* content icons */
+    ul.actions,
+    ul.actions li {
+        list-style: none none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+    ul.actions {
+        margin-bottom: 1em;
+    }
+    ul.actions li {
+        display: block;
+        float: left;
+        width: auto;
+        margin-right: .25em;
+    }
+    .jyaml-bootstrap-enabled ul.dropdown-menu.actions {
+        padding: 5px 0;
+        margin: 2px 0 0;
+    }
+    .jyaml-bootstrap-enabled ul.dropdown-menu.actions li {
+        width: auto;
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+    /* content article info */
+    dl.article-info,
+    dl.article-info dd {
+        margin: 0;
+        padding: 0;
+    }
+    dl.article-info {
+        margin-bottom: 1em;
+    }
+    dt.article-info-term {
+        /* seo hide: details text */
+        position: absolute;
+        top: -32768px;
+        left: -32768px;
+    }
+    /* joomla pagination */
+    .pagination-box {
+        margin: 1em 0;
+    }
+    .pagination .counter {
+        font-size: smaller;
+    }
+    .pagination ul,
+    .pagination ul li {
+        list-style: none none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .pagination ul {
+        background-color: #DDD;
+        float: left;
+        border: 1px solid #ddd;
+        border: 1px solid rgba(0, 0, 0, 0.20);
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+    }
+    .pagination li {
+        float: left;
+        width: auto;
+        color: #aaa;
+    }
+    .pagination li.pagination-end {
+        margin-right: 0;
+    }
+    .pagination li.active-page {
+        font-weight: bold;
+    }
+    .pagination li a,
+    .pagination li span,
+    ul.pagenav li a {
+        display: block;
+        width: auto;
+        padding: .3em .6em;
+        border-right: 1px solid #ccc;
+    }
+    .pagination li a {
+        color: #444;
+    }
+    .pagination li.pagination-end a,
+    .pagination li.pagination-end span {
+        border-right: 0;
+    }
+    .pagination li a:hover,
+    .pagination li a:focus,
+    .pagination li a:active,
+    ul.pagenav li a:hover,
+    ul.pagenav li a:focus,
+    ul.pagenav li a:active {
+        background: #eee;
+        color: #444;
+    }
+    .pagination li.active-page span {
+        background: #dfdfdf;
+        color: #444;
+    }
+    /* joomla article pagenav */
+    ul.pagenav,
+    ul.pagenav li {
+        list-style: none none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    ul.pagenav {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    ul.pagenav li.pagenav-prev,
+    ul.pagenav li.previous {
+        float: left;
+        width: auto;
+    }
+    ul.pagenav li.pagenav-next,
+    ul.pagenav li.next {
+        float: right;
+        width: auto;
+    }
+    ul.pagenav li a {
+        display: block;
+        width: auto;
+        padding: .3em .6em;
+        border: 1px solid #ddd;
+        border: 1px solid rgba(0, 0, 0, 0.20);
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.10);
+    }
+    /* tooltip */
+    .tip-wrap {
+        text-align: left;
+        font-size: 1em;
+    }
+    .tip-wrap .tip {
+        float: left;
+        background: #ffc;
+        border: 1px solid #d4d5aa;
+        padding: 5px;
+        max-width: 400px;
+        z-index: 5000;
+    }
+    .tip-wrap .tip-title {
+        font-weight: bold;
+        padding: .25em 0;
+    }
+    .tip-wrap .tip-text {
+        font-size: 1em;
+    }
+    ul.manager.thumbnails {
+        list-style: none none;
+        margin: 0;
+        padding: 0;
+        font-size: 11px;
+        overflow: hidden;
+    }
+    ul.manager.thumbnails li {
+        margin: 0 1em 1em 0;
+    }
+    ul.manager.thumbnails a {
+        color: #000 !important;
+        display: inline-block;
+        padding: 3px;
+        background: #eee;
+        border: 1px solid #ccc;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        width: 80px;
+        height: 75px;
+        overflow: hidden;
+    }
+}

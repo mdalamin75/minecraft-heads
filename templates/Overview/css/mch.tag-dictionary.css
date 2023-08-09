@@ -1,0 +1,161 @@
+/* Spoiler - Basisinfos*/
+
+.dic_collapsible {
+    border: 1px solid #CCC;
+    width: 99%;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* Spoiler BG-Farbe */
+
+.dic_level1 {
+    background-color: #FAFAFA;
+    margin-top: 10px;
+    padding: 3px 5px;
+}
+
+.dic_level1:hover {
+    background-color: #EEEEEE !important;
+}
+
+.dic_info {
+    background-color: #FFC7CE !important;
+}
+
+.dic_info:hover {
+    background-color: #EEB6BD !important;
+}
+
+.dic_work {
+    background-color: #C6EFCE !important;
+}
+
+.dic_work:hover {
+    background-color: #B5DEBD !important;
+}
+
+.dic_level2,
+.dic_level3,
+.dic_level4 {
+    /*background-color: #FAFAFA;*/
+    background-color: #B8CCE4;
+    margin: 5px 0px 0px 5px;
+    padding: 3px 5px;
+}
+
+.dic_level2:hover,
+.dic_level3:hover,
+.dic_level4:hover {
+    /*background-color: #EEEEEE;*/
+    background-color: #95B3D7;
+    margin: 5px 0px 0px 5px;
+    padding: 3px 5px;
+}
+
+/* Spoiler eines Tags / der untersten Ebene */
+
+.dic_tag {
+    background-color: #FAFAFA;
+    padding: 3px;
+    margin: 5px;
+    margin-bottom: 0px;
+}
+
+.dic_tag:hover {
+    background-color: #EEEEEE !important;
+}
+
+/* Tree description */
+
+.dic_treedescr {
+    font-weight: normal;
+    margin: 5px 0px 3px 0px;
+}
+
+.dic_featured {
+    border: 2px solid #CCC;
+    background-color: #ECA0A0;
+    padding: 2px 5px;
+    margin-top: 4px;
+}
+
+/* Branch description */
+
+.dic_branchdescr {
+    width: 97%;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-top: 0px;
+    padding: 3px 5px;
+    margin: auto;
+}
+
+/* Image */
+
+.dic_head {
+    margin: 0px 10px 0px 0px;
+    width: 55px;
+}
+
+.dic_img_not_found {
+    margin: 0px 10px 0px 0px;
+    padding: 5px;
+    width: 55px;
+    border: 1px solid #F77;
+    height: 55px;
+    float: left;
+}
+
+/* Content */
+
+.dic_content {
+    border: 1px solid #CCC;
+    border-top: 0px;
+    margin: 0px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    width: 97%;
+    display: none;
+    overflow: hidden;
+}
+
+.dic_content-align {
+    width: 45%;
+    margin: 0px 5px;
+    float: left;
+    padding: 2px;
+}
+
+/*
+.content p {
+    margin:4px 0px 0px 0px;
+}
+
+/* Misc 
+table {
+   width: 90%;
+   margin:10px;
+}
+
+
+
+.error {    
+    border: 1px solid #000;
+    padding: 7px;
+    margin: 10px 0px 0px 5px;
+    
+    width: 97%;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    font-weight:bold;
+    background-color: #F33; 
+}
+
+/* KANN VERMUTLICH WEG 
+h3 {
+    margin: 0px;
+    text-decoration:underline;
+}

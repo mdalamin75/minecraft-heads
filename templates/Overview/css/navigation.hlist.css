@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/**
+ * JYAML - Template Framework includes YAML for Joomla!
+ *
+ * All rights reserved. The JYAML project is a template to manage and
+ * configure Joomla!-Templates with the YAML XHTML/CSS Framework
+ * - http://www.yaml.de
+ *
+ * -----------------------------------------------------------------------------
+ *
+ * @version     Id: $Id$
+ *
+ * @package     JYAML
+ * @subpackage  Stylesheet
+ *
+ * @author      Reinhard Hiebl <reinhard@hieblmedia.com>
+ * @copyright   Copyright (C) 2006 - 2016, HieblMedia (Reinhard Hiebl)
+ * @license     http://www.jyaml.de/en/license Creative Commons Attribution 3.0
+ * @link        http://www.jyaml.de
+ */
+
+@media all {
+    span.image-title {
+        white-space: nowrap;
+        margin-right: 10px;
+    }
+    /* RAZEN: SPECIAL MENU CLASS - HIDDEN */
+    .ym-hlist ul li a.hidden {
+        display: none;
+    }
+    /* RAZEN: SPECIAL MENU CLASS - GREEN */
+    .ym-hlist ul li a.green {
+        background: #D7E4BC;
+        height: 18px;
+        /* padding: 0.5em 0.3em 0.2em 0.3em */
+        padding: 6px 6px;
+    }
+    .ym-hlist ul li a.green:focus,
+    .ym-hlist ul li a.green:hover,
+    .ym-hlist ul li a.green:active,
+    .ym-hlist ul li.active a.green.active_link,
+    .ym-hlist ul li.active a.green:focus,
+    .ym-hlist ul li.active a.green:hover,
+    .ym-hlist ul li.active a.green:active {
+        background: #C2D69A;
+    }
+    /* RAZEN: SPECIAL MENU CLASS - BLUE */
+    .ym-hlist ul li a.blue {
+        background: #B8CCE4;
+        /*height:18px;*/
+        /* padding: 0.5em 0.3em 0.2em 0.3em */
+        padding: 6px 6px;
+    }
+    .ym-hlist ul li a.blue:focus,
+    .ym-hlist ul li a.blue:hover,
+    .ym-hlist ul li a.blue:active,
+    .ym-hlist ul li.active a.blue.active_link,
+    .ym-hlist ul li.active a.blue:focus,
+    .ym-hlist ul li.active a.blue:hover,
+    .ym-hlist ul li.active a.blue:active {
+        background: #95B3D7;
+    }
+    /* RAZEN: SPECIAL MENU CLASS - RED */
+    .ym-hlist ul li a.red {
+        background: #E6B9B8;
+        /*height:18px;*/
+        /* padding: 0.5em 0.3em 0.2em 0.3em */
+        padding: 6px 6px;
+    }
+    .ym-hlist ul li a.red:focus,
+    .ym-hlist ul li a.red:hover,
+    .ym-hlist ul li a.red:active,
+    .ym-hlist ul li.active a.red.active_link,
+    .ym-hlist ul li.active a.red:focus,
+    .ym-hlist ul li.active a.red:hover,
+    .ym-hlist ul li.active a.red:active {
+        background: #D99795;
+    }
+    .ym-hlist {
+        /* containing floats in IE */
+        width: 100%;
+        overflow: hidden;
+        /* Bugfix:IE - collapsing horizontal margins */
+        position: relative;
+        line-height: 1em;
+        background: #EEEEEE;
+        border-top: 0px solid #CCC;
+        border-bottom: 0px solid #CCC;
+    }
+    .ym-hlist ul {
+        margin: 0px;
+        height: 28px;
+        /* padding: 0.5em 0.5em; */
+        background: #EEEEEE;
+        /* Bugfix:IE - Doubled Float Margin Bug */
+        display: inline;
+        float: left;
+        /* LTR */
+    }
+    .ym-hlist ul li {
+        /* Bugfix:IE - Doubled Float Margin Bug */
+        display: inline;
+        float: left;
+        /* LTR */
+        font-size: 1.0em;
+        line-height: 1em;
+        list-style-type: none;
+        /* Razen: Abstand zwischen Menuitems */
+        margin: 0 1px 0 0;
+        padding: 0;
+        -webkit-box-sizing: content-box;
+    }
+    /* Razen: Topmenu */
+    .ym-hlist ul li a,
+    .ym-hlist ul li strong,
+    .ym-hlist ul li span.separator {
+        background: #CCC;
+        color: #000;
+        display: block;
+        font-size: 1em;
+        line-height: 1em;
+        /* padding: 0.5em 0.5em; */
+        padding: 6px 6px;
+        font-weight: normal;
+        text-decoration: none;
+        /* text-shadow: 0 1px 1px rgba(0,0,0,.5); */
+        width: auto;
+        -webkit-transition: background-color .15s ease-in;
+        -moz-transition: background-color .15s ease-in;
+        -o-transition: background-color .15s ease-in;
+        transition: background-color .15s ease-in;
+    }
+    /* Razen: Hauptmenu-Hover */
+    .ym-hlist ul li a:focus,
+    .ym-hlist ul li a:hover,
+    .ym-hlist ul li a:active {
+        color: #000;
+        background: #BBB;
+        text-decoration: none;
+    }
+    .ym-hlist ul li.active strong,
+    .ym-hlist ul li.active span.separator,
+    .ym-hlist ul li.active a.active_link,
+    .ym-hlist ul li.active a:focus,
+    .ym-hlist ul li.active a:hover,
+    .ym-hlist ul li.active a:active {
+        background: #BBB;
+        color: #fff;
+        text-decoration: none;
+    }
+    /*
+	 * Subtitle support. Split menu title (defaults with ##).
+	 * You can change the separator value in the template params by menu options
+	 */
+    * html .ym-hlist ul li a {
+        position: relative;
+        /* IE5+6 hover fix need with subtitles */
+    }
+    .ym-hlist ul li a span,
+    .ym-hlist ul li strong span,
+    .ym-hlist ul li span.separator span {
+        display: block;
+        color: #000;
+        padding: 0 2px 0 2px;
+        height: 28px;
+    }
+    .ym-hlist ul li span.subtitle {
+        display: block;
+        font-size: smaller;
+        font-weight: normal;
+        color: #777;
+    }
+    /* RAZEN: BILDER IM MENU NACH LINKS */
+    .ym-hlist ul li img {
+        float: left;
+        width: 16px;
+        height: 16px;
+        margin-right: 0px;
+    }
+    /* RAZEN: BEI TEXT * BILD - ABSTAND */
+    .ym-hlist ul li a.imagetext img {
+        margin: 0 5px 0 0px !important;
+        padding-right: 0px;
+        white-space: nowrap;
+    }
+    .ym-hlist ul li a.imagetext span {
+        margin: 0 5px 0 0px !important;
+        padding-right: 0px;
+    }
+    /* You can use .maintitle, .subtitle-0, .subtitle-1, .subtitle-2, etc. to adjust the maintitle or each subtitle line */
+    .ym-hlist ul li span.subtitle-0 {
+        margin-top: .5em;
+    }
+    /* .hlist ul li span.subtitle-empty { display: none; } */
+    .ym-hlist ul li a:focus span.subtitle,
+    .ym-hlist ul li a:hover span.subtitle,
+    .ym-hlist ul li a:active span.subtitle {
+        color: #BBB;
+    }
+    .ym-hlist ul li.active strong span.subtitle,
+    .ym-hlist ul li.active span.separator span.subtitle,
+    .ym-hlist ul li.active a.active_link span.subtitle,
+    .ym-hlist ul li.active a:focus span.subtitle,
+    .ym-hlist ul li.active a:hover span.subtitle,
+    .ym-hlist ul li.active a:active span.subtitle {
+        color: #ccc;
+    }
+}

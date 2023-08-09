@@ -1,0 +1,154 @@
+/*----------------------------------------------------------------------------------|  www.vdm.io  |----/
+				Minecraft Heads 
+/-------------------------------------------------------------------------------------------------------/
+
+	@version		2.0.2
+	@build			18th October, 2021
+	@created		15th January, 2021
+	@package		MCH Entity Models
+	@subpackage		site.css
+	@author			LordRazen <http://www.minecraft-heads.com>	
+	@copyright		Copyright (C) 2021. All Rights Reserved
+	@license		GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html
+  ____  _____  _____  __  __  __      __       ___  _____  __  __  ____  _____  _  _  ____  _  _  ____ 
+ (_  _)(  _  )(  _  )(  \/  )(  )    /__\     / __)(  _  )(  \/  )(  _ \(  _  )( \( )( ___)( \( )(_  _)
+.-_)(   )(_)(  )(_)(  )    (  )(__  /(__)\   ( (__  )(_)(  )    (  )___/ )(_)(  )  (  )__)  )  (   )(  
+\____) (_____)(_____)(_/\/\_)(____)(__)(__)   \___)(_____)(_/\/\_)(__)  (_____)(_)\_)(____)(_)\_) (__) 
+
+/------------------------------------------------------------------------------------------------------*/
+
+/* CSS Document */
+
+.no-click {
+    pointer-events: none;
+}
+
+.sidebar {
+    width: 230px;
+    min-height: 10vh;
+}
+
+.card-golden {
+    border: 2px solid #F1D23C !important;
+}
+
+.card-golden-header {
+    border-bottom: 2px solid #FFD700 !important;
+    background-color: #F5E188 !important;
+}
+
+.golden-hr {
+    border: 0;
+    border-top: 2px solid #F1D23C;
+}
+
+/* Glow for transparent images */
+
+.glow-gold {
+    -webkit-filter: drop-shadow(0px 0px 10px #F1D23C);
+    filter: drop-shadow(0px 0px 10px #F1D23C);
+}
+
+/* Inline Icons */
+
+.inline-icon-16 {
+    display: inline-block;
+    vertical-align: -0.21em;
+}
+
+.carousel-item {
+    transition-duration: 0.1s;
+}
+
+/* Corner Ribbon */
+
+.cornerribbon-holder {
+    overflow: hidden;
+    position: relative
+}
+
+.cornerribbon {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    text-align: center;
+    opacity: 0.8;
+    /* MIDDLE: 32 - 12, 32 + 12 */
+    top: 22px;
+    left: -42px;
+    width: 145px;
+}
+
+.cornerribbon-red {
+    background: #FF0000;
+}
+
+.cornerribbon-green {
+    background: #00CC00;
+}
+
+/* Actual CSS with Flexbox for MCHv1 */
+
+.datapacks2 {
+    min-width: 400px;
+}
+
+.datapacks2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.datapacks2 ul li {
+    min-width: 100px;
+    list-style: none;
+    display: inline-block;
+    width: 25%;
+    padding: 0px;
+}
+
+.datapack2 {
+    border: 2px solid #DDD;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    /* height: calc(100% - 10px); Remove for MCH v1.0 */
+}
+
+.datapack2:hover {
+    border: 2px solid #B8CCE4;
+}
+
+.datapack2 img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.datapack2 p {
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* OLD CSS FOR CARDS */
+
+/* div.polaroid {
+  width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+  display: inline-block;
+}
+
+div.polaroid:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(49, 128, 194, 0.5);
+}
+
+div.container {
+  text-align: center;
+  font-weight: bold;
+  border:1px solid #F0F;
+  margin:10px;
+} */

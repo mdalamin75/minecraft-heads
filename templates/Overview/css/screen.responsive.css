@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/**
+ * JYAML - Template Framework includes YAML for Joomla!
+ *
+ * All rights reserved. The JYAML project is a template to manage and
+ * configure Joomla!-Templates with the YAML XHTML/CSS Framework
+ * - http://www.yaml.de
+ *
+ * -----------------------------------------------------------------------------
+ *
+ * @version     Id: $Id$
+ *
+ * @package     JYAML
+ * @subpackage  Stylesheet
+ *
+ * @author      Reinhard Hiebl <reinhard@hieblmedia.com>
+ * @copyright   Copyright (C) 2006 - 2016, HieblMedia (Reinhard Hiebl)
+ * @license     http://www.jyaml.de/en/license Creative Commons Attribution 3.0
+ * @link        http://www.jyaml.de
+ */
+
+/* Generic linearize of grids on small screens */
+
+/* reset fallback values in modern browsers */
+
+@media screen and (min-width: 0px) {
+    .ym-wrapper,
+    body.html-fullheight footer {
+        min-width: 0px;
+        width: auto;
+    }
+    /* Make a large image flexible in width */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* normal screens, tablet(landscape)  */
+
+@media screen and (max-width: 980px) {
+    /* only remove gutters for more place */
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    header {
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+/* small screens and tablet(portrait) */
+
+@media screen and (max-width: 740px),
+screen and (max-width: 768px) {
+    /* Linearize only inner main columns (not col-x), e.g. category blog with multiple columns */
+    #main .ym-equalize>*>.ym-gbox,
+    #main .ym-equalize>*>.ym-gbox-left,
+    #main .ym-equalize>*>.ym-gbox-right {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    #main .ym-grid,
+    #main .ym-grid>[class*="ym-g"],
+    #main .ym-grid>[class*="ym-col"] {
+        display: block !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    #main .ym-grid>[class*="ym-g"]>[class*="ym-gbox"],
+    #main .ym-grid>[class*="ym-col"]>[class*="ym-cbox"] {
+        padding-left: 0;
+        padding-right: 0;
+        /* optional for containing floats */
+        overflow: hidden;
+    }
+}
+
+/* mobile phones, small tablets and very small screens */
+
+@media screen and (max-width: 480px) {
+    /* disable absolute positioning for topnav to prevent overlaying */
+    #topnav {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 1em;
+    }
+    /* Linearize all columns */
+    .ym-column,
+    .ym-column .ym-col1,
+    .ym-column .ym-col2,
+    .ym-column .ym-col3 {
+        display: block !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    /* disable equal heights for grids */
+    .ym-equalize>*>.ym-gbox,
+    .ym-equalize>*>.ym-gbox-left,
+    .ym-equalize>*>.ym-gbox-right {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    /* Linearize all grids */
+    .ym-grid,
+    .ym-grid>[class*="ym-g"],
+    .ym-grid>[class*="ym-col"] {
+        display: block !important;
+        float: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+    }
+    .ym-grid>[class*="ym-g"]>[class*="ym-gbox"],
+    .ym-grid>[class*="ym-col"]>[class*="ym-cbox"] {
+        padding-left: 0;
+        padding-right: 0;
+        /* optional for containing floats */
+        overflow: hidden;
+    }
+    /* Linearize the horizontal navigation */
+    body .ym-hlist ul,
+    body .ym-hlist ul li {
+        display: block;
+        float: none;
+        width: auto;
+        text-align: left;
+    }
+    body .ym-hlist ul {
+        padding: 0.5em;
+    }
+    body .ym-hlist ul li {
+        margin-bottom: 2px;
+    }
+    body .ym-hlist ul li span.subtitle-empty {
+        display: none !important;
+    }
+}
+
+/* small mobile phones */
+
+@media screen and (max-width: 240px) {
+    /* reduce font size for very small displays */
+    body {
+        font-size: smaller;
+    }
+}

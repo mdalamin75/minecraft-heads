@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/**
+ * JYAML - Template Framework includes YAML for Joomla!
+ *
+ * All rights reserved. The JYAML project is a template to manage and
+ * configure Joomla!-Templates with the YAML XHTML/CSS Framework
+ * - http://www.yaml.de
+ *
+ * -----------------------------------------------------------------------------
+ *
+ * @version     Id: $Id$
+ *
+ * @package     JYAML
+ * @subpackage  Stylesheet
+ *
+ * @author      Reinhard Hiebl <reinhard@hieblmedia.com>
+ * @copyright   Copyright (C) 2006 - 2016, HieblMedia (Reinhard Hiebl)
+ * @license     http://www.jyaml.de/en/license Creative Commons Attribution 3.0
+ * @link        http://www.jyaml.de
+ */
+
+/* import YAML gray theme as default style */
+
+@import url(../../../libraries/jyaml/yaml/forms/gray-theme.css);
+@media all {
+    /* default joomla form validator highlight */
+    form.form-validate label.invalid {
+        color: #800 !important;
+        font-weight: bold;
+    }
+    form.form-validate input.invalid,
+    form.form-validate textarea.invalid,
+    form.form-validate select.invalid {
+        border-color: #800 !important;
+    }
+    /* equivalent styling for <sup> */
+    label span.star,
+    .ym-form label span.star {
+        color: #800;
+        font-weight: bold;
+    }
+    /* allow only vertical resize by default, on browsers that support this */
+    textarea {
+        resize: vertical;
+    }
+    /* Compatibility with Bootstrap forms */
+    .ym-form select,
+    .ym-form textarea,
+    .ym-form input[type="text"],
+    .ym-form input[type="password"],
+    .ym-form input[type="datetime"],
+    .ym-form input[type="datetime-local"],
+    .ym-form input[type="date"],
+    .ym-form input[type="month"],
+    .ym-form input[type="time"],
+    .ym-form input[type="week"],
+    .ym-form input[type="number"],
+    .ym-form input[type="email"],
+    .ym-form input[type="url"],
+    .ym-form input[type="search"],
+    .ym-form input[type="tel"],
+    .ym-form input[type="color"],
+    .uneditable-input {
+        height: auto;
+    }
+    /* your adjustments of yaml form stylesheet */
+    /* ... */
+}

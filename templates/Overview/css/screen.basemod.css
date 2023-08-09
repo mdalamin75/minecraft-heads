@@ -1,0 +1,1269 @@
+@charset "UTF-8";
+/**
+ * JYAML - Template Framework includes YAML for Joomla!
+ *
+ * All rights reserved. The JYAML project is a template to manage and
+ * configure Joomla!-Templates with the YAML XHTML/CSS Framework
+ * - http://www.yaml.de
+ *
+ * -----------------------------------------------------------------------------
+ *
+ * @version     Id: $Id$
+ *
+ * @package     JYAML
+ * @subpackage  Stylesheet
+ *
+ * @author      Reinhard Hiebl <reinhard@hieblmedia.com>
+ * @copyright   Copyright (C) 2006 - 2016, HieblMedia (Reinhard Hiebl)
+ * @license     http://www.jyaml.de/en/license Creative Commons Attribution 3.0
+ * @link        http://www.jyaml.de
+ */
+
+@media screen {
+    /**
+	 * Forcing vertical scrollbars in IE8, Firefox, Webkit & Opera
+	 *
+	 * @workaround
+	 * @affected IE8, FF, Webkit, Opera
+	 * @css-for all
+	 * @valid CSS3
+	 */
+    body {
+        overflow-y: scroll;
+    }
+    /**
+	 * For global blow up the html tag to full viewport
+	 * (only required with the fullheight template)
+	 */
+    html {
+        height: 100%;
+        padding: 0;
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Formatting basic layout elements
+	 */
+    /* Marginal areas & page background */
+    body {
+        background: #4d87c7;
+    }
+    /* Centering layout in old IE-versions */
+    body {
+        text-align: center;
+    }
+    /* Datapack */
+    div.datapack {
+        display: inline-block;
+        border: 2px solid #DDDDDD;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 5px;
+        width: 30%;
+        /*height:163px;*/
+    }
+    div.datapack_new {
+        display: inline-block;
+        border: 2px solid #DDDDDD;
+        border-radius: 5px;
+        margin: 5px;
+        margin-bottom: 25px;
+        padding: 5px;
+        width: 240px;
+        height: 163px;
+    }
+    div.datapack-title {
+        text-align: center;
+        font-weight: bold;
+        height: 25px;
+        width: 100%;
+    }
+    img.dpimg {
+        /*border:1px solid #222;*/
+        border-radius: 3px;
+    }
+    /* Layout:width, background, borders */
+    .ym-wrapper {
+        min-width: 760px;
+        max-width: 80em;
+        text-align: left;
+        margin: 0 auto;
+        background: #fff;
+    }
+    .ym-wbox {
+        padding: 10px;
+    }
+    /* div.main {
+        text-align: center;
+        white-space: nowrap;
+    } */
+    div.content {
+        border-right: 1px solid #555;
+        border-left: 1px solid #555;
+        width: 1120px;
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+        /* Reduktion des Abstands der Adds zum Content */
+        margin: 0 -1px 0 -1px;
+    }
+    div.add {
+        border: 0px solid #00FF00;
+        width: 160px;
+        display: inline-block;
+        margin: 0px;
+    }
+    div.addfix {
+        border: 0px solid #264e79;
+        height: 100%;
+        /* Deaktivierung bei Problemen! */
+        position: fixed;
+        /* Deaktivierung bei Problemen! */
+        top: 0px;
+        /* back to 0 */
+        z-index: 1;
+    }
+    @media(min-width: 1750px) {
+        div.add {
+            border: 0px solid #00FF00;
+            width: 160px;
+            display: inline-block;
+        }
+        div.addfix {
+            border: 0px solid #3D87B7;
+            height: 600px;
+            position: fixed;
+            /* Deaktivierung bei Problemen! */
+            top: 0px;
+            /* back to 0 */
+            z-index: 1;
+            /* margin-top: 150px; */
+            /*Aktivierung bei Problemen! */
+        }
+        .adsbygoogle {
+            width: 160px;
+        }
+    }
+    #addleft {
+        text-align: right;
+    }
+    #addright {
+        text-align: left;
+    }
+    /* Hide Adblock */
+    div.moduleboxhidden {
+        display: none;
+    }
+    /* RAZEN: TABELLE HINTER MENU UND SUCHE */
+    table.nav {
+        background: #EEEEEE;
+        border-collapse: collapse;
+        border: 1px #ddd solid;
+        border-right: 1px #CCC solid;
+        border-left: 1px #CCC solid;
+        border-top: 0px;
+        margin: 0;
+        display: table;
+        /* Bootstrap Override */
+    }
+    table.nav td {
+        padding: 0px;
+    }
+    /* RAZEN NEU: EXTRAORDER POSITIONIEREN */
+    div.extraorder {
+        /* Border nur für Testzwecke */
+        float: right;
+        margin: 17px 17px 0 0;
+        top: 0px;
+    }
+    /* RAZEN NEU: K2TAGFILTER POSITIONIEREN */
+    div.k2tagfilter {
+        /* Border nur für Testzwecke */
+        float: right;
+        margin: 17px 17px 0 0;
+        bottom: 0px;
+    }
+    header {
+        color: #000;
+        background: #fff repeat-x top left;
+        padding: 0px;
+        position: relative;
+    }
+    /* RAZEN EDIT: HEADER IMAGE FOR THE LINK */
+    .header_image img {
+        display: block;
+        /* prevent line-height spacing in IE and maybe some other browsers too */
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    /* #topnav gets absolute positioning within <header /> */
+    #topnav {
+        background: transparent;
+        color: #aaa;
+        -webkit-box-sizing: content-box !important;
+        /* Bootstrap Override */
+        -moz-box-sizing: content-box !important;
+        box-sizing: content-box !important;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        /* LTR */
+        text-align: right;
+        /* LTR */
+    }
+    #main {
+        background: #fff;
+        padding: 10px 0;
+    }
+    footer {
+        color: #666;
+        background: #f9f9f9;
+        border-top: 5px #efefef solid;
+        line-height: 1.5em;
+    }
+    footer .ym-cbox {
+        padding: 10px;
+    }
+    #breadcrumbs {
+        padding-top: 1em;
+    }
+    .breadcrumbs {
+        font-size: smaller;
+        padding: .5em 1em;
+        background: #e5e5e5;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* IE10+ */
+        background: linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0);
+        /* IE6-9 */
+        -webkit-box-shadow: inset 0 1px 0 #fff;
+        -moz-box-shadow: inset 0 1px 0 #fff;
+        box-shadow: inset 0 1px 0 #fff;
+        border: 1px solid #ddd;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    /* Backup for correct positioning (for older YAML versions) */
+    header,
+    #nav,
+    #main,
+    footer,
+    #breadcrumbs,
+    .clr {
+        clear: both;
+    }
+    /* noscript formatting */
+    noscript {
+        display: block;
+        overflow: hidden;
+        width: auto;
+    }
+    noscript div {
+        padding: 5px 7px;
+        border: 3px solid #c30;
+        margin: 0 0 1em 0;
+        background: #ffe4e4;
+    }
+    noscript.jswarn-global div {
+        background: #FFFFCF;
+        margin: 0;
+        border: 0;
+        border-top: 6px solid #c30;
+        border-bottom: 6px solid #c30;
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Formatting content container
+	 *
+	 * |-------------------------------|
+	 * | header                        |
+	 * |-------------------------------|
+	 * | col1    | col3      | col2    |
+	 * | 25%     | flexible  | 25%     |
+	 * |-------------------------------|
+	 * | footer                        |
+	 * |-------------------------------|
+	 *
+	 * Set here your default column values
+	 * Details see: {@section content-columns}
+	 */
+    /*
+	 * RAZEN: EDIT OF THE WIDTH OF THE COLUMNS!!
+	.ym-col1 { width:25%; }
+	.ym-col2 { width:25%; }
+	.ym-col3 { margin:0 25%; }
+	*/
+    .ym-col1 {
+        width: 28.2%;
+    }
+    .ym-col2 {
+        width: 28.2%;
+    }
+    .ym-col3 {
+        margin: 0 28.2%;
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Column order layouts
+	 * Visual styling for the column ordering of .ym-col1, .ym-col2 and .ym-col2
+
+	 * @require dynamic body css classes in html document (<body<?php echo $this->getBodyCssClass(); ?>>)
+	 * @section content-columns
+	 */
+    /* Layout: 1col_3 (only one column) */
+    body.layout-1col_3 .ym-column-main>.ym-col1 {
+        /* @hide */
+        display: none;
+    }
+    body.layout-1col_3 .ym-column-main>.ym-col2 {
+        /* @hide */
+        display: none;
+    }
+    body.layout-1col_3 .ym-column-main>.ym-col3 {
+        /* main  */
+        margin-left: 0;
+        margin-right: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    body.layout-1col_3 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Layout: 2col_13 (normal/default view) */
+    body.layout-2col_13 .ym-column-main>.ym-col1 {
+        /* left  */
+    }
+    body.layout-2col_13 .ym-column-main>.ym-col1 .ym-cbox {
+        padding-left: 0;
+    }
+    body.layout-2col_13 .ym-column-main>.ym-col2 {
+        /* @hide */
+        display: none;
+    }
+    body.layout-2col_13 .ym-column-main>.ym-col3 {
+        /* main  */
+        margin-right: 0;
+        border-right: 0;
+    }
+    body.layout-2col_13 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-right: 0;
+    }
+    /* Layout: 2col_32 (normal/default view) */
+    body.layout-2col_32 .ym-column-main>.ym-col1 {
+        /* @hide */
+        display: none;
+    }
+    body.layout-2col_32 .ym-column-main>.ym-col2 {
+        /* right */
+    }
+    body.layout-2col_32 .ym-column-main>.ym-col2 .ym-cbox {
+        padding-right: 0;
+    }
+    body.layout-2col_32 .ym-column-main>.ym-col3 {
+        /* main  */
+        margin-left: 0;
+        border-left: 0;
+    }
+    body.layout-2col_32 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-left: 0;
+    }
+    /* Layout: 2col_31 (special/advanced view - require width adjustments) */
+    body.layout-2col_31 .ym-column-main>.ym-col1 {
+        /* main  */
+        width: 75%;
+        float: right;
+    }
+    body.layout-2col_31 .ym-column-main>.ym-col1 .ym-cbox {
+        padding-right: 0;
+    }
+    body.layout-2col_31 .ym-column-main>.ym-col2 {
+        /* @hide */
+        display: none;
+    }
+    body.layout-2col_31 .ym-column-main>.ym-col3 {
+        /* left  */
+        margin-right: 75%;
+        margin-left: 0;
+        border-left: 0;
+    }
+    body.layout-2col_31 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-left: 0;
+    }
+    /* Layout: 2col_23 (special/advanced view - require width adjustments) */
+    body.layout-2col_23 .ym-column-main>.ym-col1 {
+        /* @hide */
+        display: none;
+    }
+    body.layout-2col_23 .ym-column-main>.ym-col2 {
+        /* main  */
+        width: 75%;
+        float: left;
+    }
+    body.layout-2col_23 .ym-column-main>.ym-col2 .ym-cbox {
+        padding-left: 0;
+    }
+    body.layout-2col_23 .ym-column-main>.ym-col3 {
+        /* right */
+        margin-left: 75%;
+        margin-right: 0;
+        border-right: 0;
+    }
+    body.layout-2col_23 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-right: 0;
+    }
+    /* Layout: 3col_132 (normal/default view) */
+    body.layout-3col_132 .ym-column-main>.ym-col1 {
+        /* left  */
+        /* YAML core column order */
+    }
+    body.layout-3col_132 .ym-column-main>.ym-col1 .ym-cbox {
+        padding-left: 0;
+    }
+    body.layout-3col_132 .ym-column-main>.ym-col2 {
+        /* right */
+        /* YAML core column order */
+    }
+    body.layout-3col_132 .ym-column-main>.ym-col2 .ym-cbox {
+        padding-right: 0;
+    }
+    body.layout-3col_132 .ym-column-main>.ym-col3 {
+        /* main  */
+        /* YAML core column order */
+    }
+    /* Layout: 3col_123 (special/advanced view - require width adjustments) */
+    body.layout-3col_123 .ym-column-main>.ym-col1 {
+        /* left  */
+        width: 25%;
+        margin: 0;
+    }
+    body.layout-3col_123 .ym-column-main>.ym-col1 .ym-cbox {
+        padding-left: 0;
+    }
+    body.layout-3col_123 .ym-column-main>.ym-col2 {
+        /* main  */
+        width: 50%;
+        float: left;
+        margin: 0;
+    }
+    body.layout-3col_123 .ym-column-main>.ym-col3 {
+        /* right */
+        margin-left: 75%;
+        margin-right: 0;
+        border-right: 0;
+    }
+    body.layout-3col_123 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-right: 0;
+    }
+    /* Layout: 3col_213 (special/advanced view - require width adjustments) */
+    body.layout-3col_213 #main {
+        width: 100%;
+        float: left;
+    }
+    body.layout-3col_213 .ym-column-main>.ym-col1 {
+        /* main  */
+        width: 50%;
+        float: left;
+        margin-left: 25%;
+    }
+    body.layout-3col_213 .ym-column-main>.ym-col2 {
+        /* left  */
+        width: 25%;
+        float: left;
+        margin-left: -75%;
+    }
+    body.layout-3col_213 .ym-column-main>.ym-col2 .ym-cbox {
+        padding-left: 0;
+    }
+    body.layout-3col_213 .ym-column-main>.ym-col3 {
+        /* right */
+        float: right;
+        width: 25%;
+        margin-left: -5px;
+        margin-right: 0;
+        border-right: 0;
+    }
+    body.layout-3col_213 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-right: 0;
+    }
+    /* Layout: 3col_231 (special/advanced view - reverse left and right of col1 and col2) */
+    body.layout-3col_231 .ym-column-main>.ym-col1 {
+        /* right */
+        float: right;
+    }
+    body.layout-3col_231 .ym-column-main>.ym-col1 .ym-cbox {
+        padding-right: 0;
+    }
+    body.layout-3col_231 .ym-column-main>.ym-col2 {
+        /* left  */
+        float: left;
+    }
+    body.layout-3col_231 .ym-column-main>.ym-col2 .ym-cbox {
+        padding-left: 0;
+    }
+    body.layout-3col_231 .ym-column-main>.ym-col3 {
+        /* main  */
+    }
+    /* Layout: 3col_312 (special/advanced view - require width adjustments) */
+    body.layout-3col_312 #main {
+        width: 100%;
+        float: left;
+    }
+    body.layout-3col_312 .ym-column-main>.ym-col1 {
+        /* main  */
+        width: 50%;
+        float: right;
+        margin-left: -75%;
+        margin-right: 25%;
+    }
+    body.layout-3col_312 .ym-column-main>.ym-col2 {
+        /* right */
+        width: 25%;
+        float: right;
+        margin-right: 0;
+        border-right: 0;
+    }
+    body.layout-3col_312 .ym-column-main>.ym-col2 .ym-cbox {
+        padding-right: 0;
+    }
+    body.layout-3col_312 .ym-column-main>.ym-col3 {
+        /* left  */
+        float: left;
+        width: 25%;
+        margin-left: 0;
+        border-left: 0;
+        margin-right: -5px;
+    }
+    body.layout-3col_312 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-left: 0;
+    }
+    /* Layout: 3col_321 (special/advanced view - require width adjustments) */
+    body.layout-3col_321 .ym-column-main>.ym-col1 {
+        /* right */
+        width: 25%;
+        float: right;
+        margin: 0;
+    }
+    body.layout-3col_321 .ym-column-main>.ym-col1 .ym-cbox {
+        padding-right: 0;
+    }
+    body.layout-3col_321 .ym-column-main>.ym-col2 {
+        /* main  */
+        width: 50%;
+        margin: 0;
+    }
+    body.layout-3col_321 .ym-column-main>.ym-col3 {
+        /* left  */
+        margin-left: 0;
+        margin-right: 75%;
+    }
+    body.layout-3col_321 .ym-column-main>.ym-col3 .ym-cbox {
+        padding-left: 0;
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Index HTML Template adjustments (html/index/*.php)
+	 * @require dynamic body css classes in html document (<body<?php echo $this->getBodyCssClass(); ?>>)
+	 * @section content-templates
+	 */
+    /* Template adjustments: /html/index/fullheight.php */
+    body.html-fullheight {
+        height: 100% !important;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    body.html-fullheight .ym-wrapper {
+        position: relative !important;
+        min-height: 100%;
+        height: auto !important;
+        background: #fff;
+    }
+    * html body.html-fullheight .ym-wrapper {
+        height: 100% !important;
+        /* IE6 */
+    }
+    body.html-fullheight .ym-wbox {
+        padding-bottom: 70px;
+    }
+    body.html-fullheight footer {
+        position: relative !important;
+        background: #fff;
+        border: 0 none;
+        padding: 0;
+        margin: 0 auto;
+        margin: -70px auto 0;
+        /* move footer to its position (equal padding-bottom of .ym-wbox) */
+        min-width: 760px;
+        max-width: 80em;
+    }
+    body.html-fullheight footer .ym-cbox {
+        text-align: left;
+        color: #666;
+        background: #f9f9f9;
+        padding: 10px;
+        border-top: 5px #efefef solid;
+        margin: 0 10px;
+    }
+    /* Template adjustments: /html/index/fullpage.php */
+    body.html-fullpage,
+    body.html-fullpage header,
+    body.html-fullpage #nav,
+    body.html-fullpage #breadcrumbs,
+    body.html-fullpage #main,
+    body.html-fullpage footer {
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    body.html-fullpage .ym-wrapper {
+        background: transparent;
+    }
+    body.html-fullpage header {
+        border-bottom: 5px #ccc solid;
+    }
+    body.html-fullpage header .ym-wbox {
+        position: relative;
+        padding: 10px;
+    }
+    body.html-fullpage #nav {
+        background: #eee;
+    }
+    body.html-fullpage #breadcrumbs {
+        background: #f5f5f5;
+    }
+    body.html-fullpage footer {
+        background: #f5f5f5;
+        border-top: 5px #ccc solid;
+    }
+    /* component template adjsustments */
+    body.tmpl-component {
+        text-align: left;
+        background: #fff;
+    }
+    body.tmpl-component #main {
+        margin: 0;
+        border: 0;
+        padding: 10px;
+        background: #fff;
+    }
+    /* offline template adjustments */
+    body.tmpl-offline #main {
+        padding: 10px;
+    }
+    /* error template adjustments */
+    body.tmpl-error h1 {
+        color: #f00;
+    }
+    body.tmpl-error p.info,
+    body.tmpl-error #techinfo {
+        overflow: auto;
+    }
+    body.tmpl-error #techinfo table {
+        width: 100%;
+    }
+    /* WYSIWYG Editor Mode */
+    body.editor-active .ym-col1 {
+        display: none !important;
+    }
+    body.editor-active .ym-col2 {
+        display: none !important;
+    }
+    body.editor-active .ym-col3 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Styling of layout specific elements
+	 */
+    header h1 {
+        font-weight: bold;
+        font-size: 2.5em;
+        letter-spacing: -2px;
+        line-height: 65%;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    header h1 a:hover,
+    header h1 a:focus,
+    header h1 a:active {
+        background: transparent;
+        text-decoration: none;
+    }
+    /** RAZEN EDIT SLOGAN **/
+    header .slogan {
+        float: right;
+        right: 0px;
+        bottom: 0px;
+        position: absolute;
+        display: block;
+        background: #DDD;
+        color: #000;
+        font-weight: bold;
+        border: 2px solid #000;
+        border-radius: 4px;
+        margin: 5px;
+        padding: 0 5px 0 4px;
+    }
+    #topnav a {
+        color: #999;
+        font-weight: normal;
+        background: transparent;
+        text-decoration: none;
+    }
+    #topnav a:focus,
+    #topnav a:hover,
+    #topnav a:active {
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    footer a {
+        color: #999;
+        background: transparent;
+        font-weight: bold;
+    }
+    footer a:focus,
+    footer a:hover,
+    footer a:active {
+        color: #4D87C7;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Skiplinks
+	 *
+	 * Visual styling for skiplink navigation
+	 *
+	 * @section content-skiplinks
+	 */
+    .ym-skiplinks a.ym-skip:focus,
+    .ym-skiplinks a.ym-skip:active {
+        color: #fff;
+        background: #333;
+        border-bottom: 1px #000 solid;
+        padding: 10px 0;
+        text-decoration: none;
+    }
+    /* prevent the anchor links generate empty space */
+    .skiplink-anchor {
+        display: block !important;
+        border: 0 none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        outline: 0 none !important;
+        line-height: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        overflow: hidden !important;
+    }
+    /**
+	 * ---------------------------------------------------------------------------- #
+	 *
+	 * Additional Grid width's (5-steps 10%-90% and up to 10 columns)
+	 * Defaults see: http://www.yaml.de/docs/index.html#yaml-grids
+	 *
+	 * @section subtemplates
+	 */
+    .ym-g10 {
+        width: 10%;
+    }
+    .ym-g11 {
+        width: 11.111%;
+    }
+    .ym-g12 {
+        width: 12.5%;
+    }
+    .ym-g14 {
+        width: 14.285%;
+    }
+    .ym-g15 {
+        width: 15%;
+    }
+    .ym-g16 {
+        width: 16.666%;
+    }
+    .ym-g30 {
+        width: 30%;
+    }
+    .ym-g35 {
+        width: 35%;
+    }
+    .ym-g45 {
+        width: 45%;
+    }
+    .ym-g55 {
+        width: 55%;
+    }
+    .ym-g65 {
+        width: 65%;
+    }
+    .ym-g70 {
+        width: 70%;
+    }
+    .ym-g85 {
+        width: 85%;
+    }
+    .ym-g90 {
+        width: 90%;
+    }
+    /**
+	 * Generic module formatting
+	 *
+	 * @section joomla-modules
+	 */
+    .module-box,
+    .moduletable,
+    .moduletable_menu {
+        margin-bottom: 5px;
+    }
+    .module-box .module-heading,
+    .moduletable h3,
+    .moduletable_menu h3 {
+        line-height: normal;
+        background: #fafafa;
+        border: 1px solid #ddd;
+        margin: 0px;
+        padding: 8px;
+        margin-top: 5px;
+    }
+    /**
+	 * Joomla specific adjustments
+	 *
+	 * @section joomla-specific
+	 */
+    /* Joomla Profiler (Debug Output) */
+    #system-debug {
+        background: #fff;
+        color: #000;
+        text-align: left;
+    }
+    #system-debug h4 {
+        color: #f00;
+        background: #eaeaea;
+        padding: 5px;
+        margin: 1em 0 0.25em 0;
+        border: 0;
+    }
+    #system-debug ol li h4 {
+        background: transparent;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    #system-debug ol li {
+        padding-bottom: 1em;
+    }
+    #system-debug pre {
+        background: #fff;
+        color: #800;
+        padding: 5px;
+        margin: 0 0 1em 0;
+    }
+    #system-debug table {
+        width: 100%;
+    }
+    #system-debug table,
+    #system-debug td {
+        background: #fff;
+        color: #000;
+    }
+    /* Editor XTD Buttons */
+    #editor-xtd-buttons {
+        overflow: hidden;
+        width: 100%;
+        margin: 1em 0;
+    }
+    .button2-left,
+    .button2-right {
+        float: left;
+        margin: 0 1em 1em 0;
+    }
+    .button2-left a,
+    .button2-right a,
+    .button2-left span,
+    .button2-right span {
+        display: block;
+        width: auto;
+        float: left;
+        background: #eee;
+        border: 1px solid #ccc;
+        padding: .4em .5em;
+    }
+    /* Default edit form */
+    form#adminForm fieldset {
+        border: 1px #ddd solid;
+        background: #fafafa;
+        margin: 0 0 1em 0;
+        padding: 0.5em;
+    }
+    form#adminForm legend {
+        font-size: 125%;
+        font-weight: normal;
+        color: #000;
+    }
+    form#adminForm .formelm,
+    form#adminForm .formelm-area {
+        overflow: hidden;
+        width: 100%;
+        margin: 0.5em 0;
+    }
+    form#adminForm label {
+        display: block;
+        cursor: pointer;
+        float: left;
+        width: 30%;
+    }
+    form#adminForm .formelm-buttons {
+        /* float: right; */
+    }
+    /**
+	 * System Messages
+	 */
+    #system-message-container {
+        /* new in J1.7 */
+    }
+    #system-message {
+        margin: 10px 0 0 0;
+        padding: 0;
+        border: 0;
+        color: #000;
+    }
+    #system-message .alert-heading {
+        /*font-weight:bold; margin:0; padding:1em 0 0 0; border:0; font-size:1.25em; */
+        display: none;
+        /* hide title text (Error, Notice, Warning, Message) */
+    }
+    #system-message a.close {
+        display: none;
+    }
+    #system-message .alert {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    #system-message .alert>div {
+        padding: 1em;
+        margin: 0;
+        border: 0;
+    }
+    #system-message .alert>div>p {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        color: #333;
+    }
+    #system-message .alert {
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        /* RAZEN EDIT: DISPLAY NONE TO HIDE THE ERROR! */
+        display: none;
+    }
+    /* System standard messages */
+    #system-message>.alert-message {
+        border: 3px solid #1566CC;
+        background: #E6F2FF;
+        color: #4D87C7;
+        font-weight: bold;
+        color: #1566CC;
+    }
+    /* System error messages */
+    #system-message>.alert-error {
+        border: 3px solid #c30;
+        background: #ffe4e4;
+    }
+    /* System warning messages */
+    #system-message>.alert-warning {
+        border: 3px solid #c30;
+        background: #ffe4e4;
+    }
+    /* System notice messages */
+    #system-message>.alert-notice {
+        border: 3px solid #ccc;
+        background: #f9f9f9;
+        display: none
+    }
+    /**
+	 * Bootstrap specific: Add fade and collapse transitions to work by default without the full Bootstrap CSS.
+	 */
+    .fade {
+        opacity: 0;
+        display: none;
+        -webkit-transition: opacity .15s linear;
+        -moz-transition: opacity .15s linear;
+        -o-transition: opacity .15s linear;
+        transition: opacity .15s linear;
+    }
+    .fade.in {
+        opacity: 1;
+    }
+    .collapse {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        -webkit-transition: height .35s ease;
+        -moz-transition: height .35s ease;
+        -o-transition: height .35s ease;
+        transition: height .35s ease;
+    }
+    .collapse.in {
+        height: auto;
+    }
+    /* RAZEN: Modal Fix for Datapack Unlock DIalog without breaking Kunena */
+    /* .modal-backdrop.fade.in {
+		opacity: 0.5 !important;
+	} */
+    /*		
+	#addleft {
+		width: 20% !important;
+	}
+	
+	#addright {
+		width: 20% !important;
+	}
+	
+
+	.adsbygoogle {
+		width: 100% !important;
+	}
+	#aswift_0_expand {
+		width: 100% !important;
+	}
+	#aswift_0_expand ins {
+		width: 100% !important;
+	}
+	#aswift_0 {
+		width: 100% !important;
+	}
+	*/
+}
+
+.module-box.modulebox.Mobile-add-after-menu {
+    display: none;
+}
+
+.module-box.modulebox.Mobile-before-content {
+    display: none;
+}
+
+#k2ModuleBox287 {
+    display: none;
+}
+
+/*
+
+@media only screen and (min-width: 1365px) {
+  div.addfix {
+    width: 100px !important;
+	}
+	div.add {
+    width: 100px !important;
+    }
+}
+*/
+
+.module-box.modulebox.mobile-col3-display {
+    display: none;
+}
+
+.module-box.modulebox.desktop-col3-display {
+    display: block;
+}
+
+@media only screen and (min-width: 1500px) {
+    div.addfix {
+        width: 180px !important;
+    }
+    div.add {
+        width: 180px !important;
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    div.addfix {}
+    #addleft {
+        width: 15% !important;
+    }
+    #addright {
+        width: 15% !important;
+    }
+    #addleft .addfix {
+        width: 15% !important;
+    }
+    #addright .addfix {
+        width: 15% !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .module-box.modulebox.mobile-col3-display {
+        display: block;
+    }
+    .module-box.modulebox.desktop-col3-display {
+        display: none;
+    }
+    .module-box.modulebox.Mobile-after-menu-left {
+        padding-bottom: 50px;
+    }
+    .module-box.modulebox.Mobile-add-after-menu {
+        display: block;
+    }
+    .module-box.modulebox.Mobile-before-content {
+        display: block;
+    }
+    #k2ModuleBox287 {
+        display: block;
+    }
+    #addleft {
+        display: none;
+    }
+    #addright {
+        display: none;
+    }
+    div.content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #topnav div {
+        margin-top: 0px !important;
+    }
+    #topnav div {
+        margin-top: 0px !important;
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+    }
+    .header_image img {
+        display: block;
+        position: absolute;
+        top: 66px;
+        left: 65px;
+        width: 210px;
+    }
+    #nav table.nav td {
+        padding: 0px;
+        width: 100%;
+        display: table;
+    }
+    #nav table.nav td:nth-child(2) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #nav table.nav td:nth-child(2) div {
+        float: left !important;
+    }
+    #nav tbody td {
+        text-align: left;
+        border-bottom: 0px solid #ccc;
+    }
+    #nav table.nav {
+        background: #fff;
+    }
+    #nav .ym-hlist ul {
+        background: #fff;
+    }
+    #nav>.ym-hlist {
+        background: #fff;
+    }
+    #nav div.ym-hlist {
+        background: #fff;
+    }
+    .ym-vlist li a {
+        padding-left: 3% !important;
+    }
+    .dropdown-vertical li span.item-title {
+        padding: 0.5em 0px 0.5em 3% !important;
+    }
+    .blog .items-leading table tr td {
+        width: 100% !important;
+        display: block;
+    }
+    table.nav {
+        border: none;
+    }
+    /*********/
+    .well {
+        display: contents;
+    }
+    form#adminForm label {
+        display: block;
+        cursor: pointer;
+        float: none;
+        width: 100% !important;
+    }
+    .shop label {
+        margin: 18px 0px !important;
+    }
+    .shop span {
+        width: 100%;
+        padding: 15px 0px !important;
+        display: block !important;
+        border-radius: 2px;
+    }
+    .shop .controls label span img {
+        width: 40px !important;
+        float: left;
+        padding: 0px 10px;
+        position: relative;
+        bottom: 10px;
+    }
+    .shop .controls label span br {
+        display: none;
+    }
+    form#adminForm #totalamount-lbl {
+        width: 50% !important;
+        float: left;
+        position: relative;
+        left: 66px;
+    }
+    #totalamount {
+        width: 40% !important;
+        position: relative;
+        left: 57px;
+    }
+    #adminForm div:nth-child(2) div:nth-child(4),
+    #adminForm div:nth-child(2) div:nth-child(3) {
+        margin: 14px auto 0 auto !important;
+        padding: 10px 10px !important;
+        width: 75% !important;
+    }
+    #adminForm>div {
+        margin: 35px 30px !important;
+    }
+    .ym-col3 .ym-cbox.ym-clearfix {
+        padding: 0;
+    }
+    #frm_paypal div {
+        margin: 0 !important;
+    }
+    .dropdownHelperContainer.dropitem-Helper.dropitem-right-Helper.dropitemLevel0-Helper {
+        inset: 827px auto auto 11.8px !important;
+        width: 200px !important;
+    }
+    .ym-hlist {
+        overflow: inherit !important;
+    }
+    .ym-hlist ul li img {
+        margin-right: -15px !important
+    }
+}

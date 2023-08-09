@@ -1,0 +1,94 @@
+ul.ym-skiplinks {
+  display: none !important;
+}
+a.ym-skip {
+  display: none;
+}
+.highlight {
+  color: #ed8a0a;
+}
+/* Header */
+header .navbar-nav .nav-item {
+  border-radius: 10px;
+  transition: all ease-in-out 0.5s;
+}
+header .navbar-nav .nav-item:hover {
+  background-color: #f6d912;
+}
+/* Main */
+main {
+  margin-top: 70px;
+}
+/* Top Section */
+.top_banner {
+  width: 100%;
+  height: 100%;
+  min-height: 80vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+.top_banner h1 {
+    color: #f6d912;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Hero Section */
+#hero {
+  background-color: whitesmoke;
+}
+.hero_image {
+  width: 100%;
+  height: 250px;
+}
+
+/* Datapack Section */
+div#video-nc {
+  height: 200px !important;
+}
+.op-player {
+  height: 200px !important;
+}
+section#latest_datapack {
+  background-color: whitesmoke;
+}
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #f8f9fa;
+  position: absolute;
+}
+.footer-navbar .nav-item a {
+  padding: 5px;
+  font-weight: 500;
+  transition: ease 0.5s;
+}
+.footer-navbar .nav-item:hover a {
+  color: #f6d912;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* Swiper Slide */
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 230px;
+}
